@@ -1,0 +1,45 @@
+/* ============================================================
+   DESIGN TOKENS — change colors/spacing/type here only.
+   Every component consumes these variables, never raw hex.
+   Palette source: provided color scheme screenshot.
+   ============================================================ */
+
+:root {
+  /* Palette */
+  --color-ink: #1B262C;       /* near-black, headers/text */
+  --color-navy: #0F4C75;      /* deep blue, accents/links */
+  --color-blue: #3282B8;      /* primary accent */
+  --color-sky: #BBE1FA;       /* light backgrounds/highlights */
+
+  --color-bg: #F7FAFC;        /* page background, derived light */
+  --color-surface: #FFFFFF;   /* card surfaces */
+  --color-text: var(--color-ink);
+  --color-text-muted: #5A6B73;
+  --color-border: #E1ECF4;
+
+  /* Type */
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  --fs-h1: clamp(2.5rem, 6vw, 4.5rem);
+  --fs-h2: clamp(1.75rem, 4vw, 2.75rem);
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+  --fs-small: 0.875rem;
+
+  /* Spacing scale */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+
+  /* Layout */
+  --max-width: 960px;
+  --radius: 10px;
+  --nav-height: 64px;
+
+  /* Motion */
+  --transition: 0.2s ease;
+}

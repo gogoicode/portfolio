@@ -1,0 +1,29 @@
+.certs__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.certs__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.certs__item:first-child {
+  border-top: 1px solid var(--color-border);
+}
+
+.certs__title {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.certs__issuer {
+  font-size: var(--fs-small);
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}

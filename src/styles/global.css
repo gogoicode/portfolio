@@ -1,0 +1,61 @@
+@import "./tokens.css";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-height);
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-bg);
+  line-height: 1.6;
+  font-size: var(--fs-body);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--color-ink);
+}
+
+a {
+  color: var(--color-navy);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+section {
+  padding: var(--space-6) var(--space-3);
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  font-family: var(--font-display);
+  font-size: var(--fs-small);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  margin-bottom: var(--space-1);
+}
+
+.section-title {
+  font-size: var(--fs-h2);
+  margin-bottom: var(--space-4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; animation: none !important; }
+}
