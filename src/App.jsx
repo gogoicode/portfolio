@@ -1,33 +1,33 @@
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Skills from "./components/Skills";
-import Certifications from "./components/Certifications";
-import Contact from "./components/Contact";
+import { useState } from "react";
+import Scene from "./components/Scene";
+import Overlay from "./components/Overlay";
+import { profile } from "./data/profile";
 import "./styles/global.css";
 
-/**
- * App is purely compositional: it lists sections in order.
- * To add/remove/reorder a page section, edit this file AND
- * add/remove the matching entry in data/profile.js `sections`
- * (which drives the nav). Each section component is fully
- * self-contained (own data slice + own CSS).
- */
 export default function App() {
+  const [activeSection, setActiveSection] = useState(null);
+
+  const handleSectionClick = (id) => {
+    setActiveSection(id);
+  };
+
+  const closeOverlay = () => {
+    setActiveSection(null);
+  };
+
   return (
     <>
-      <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Certifications />
-        <Contact />
+      <header className="app-header glass-panel">
+        <h1>{profile.name}</h1>
+        <p>{profile.role}</p>
+        <p className="app-header-instruction">Rotate the cube and click a face to explore</p>
+      </header>
+
+      <main className="app-main">
+        <Scene onSectionClick={handleSectionClick} />
       </main>
+
+      <Overlay activeSection={activeSection} onClose={closeOverlay} />
     </>
   );
 }

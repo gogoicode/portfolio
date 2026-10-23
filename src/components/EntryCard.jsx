@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import Tag from "./Tag";
 import "./EntryCard.css";
 
@@ -8,8 +9,13 @@ import "./EntryCard.css";
  * of both at once.
  */
 export default function EntryCard({ title, subtitle, points, tech }) {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   return (
-    <article className="entry">
+    <motion.article variants={itemVariants} className="entry glass-panel">
       <h3 className="entry__title">{title}</h3>
       {subtitle && <p className="entry__subtitle">{subtitle}</p>}
       {points?.length > 0 && (
@@ -26,6 +32,6 @@ export default function EntryCard({ title, subtitle, points, tech }) {
           ))}
         </div>
       )}
-    </article>
+    </motion.article>
   );
 }

@@ -5,17 +5,18 @@
    ============================================================ */
 
 :root {
-  /* Palette */
-  --color-ink: #1B262C;       /* near-black, headers/text */
-  --color-navy: #0F4C75;      /* deep blue, accents/links */
-  --color-blue: #3282B8;      /* primary accent */
-  --color-sky: #BBE1FA;       /* light backgrounds/highlights */
-
-  --color-bg: #F7FAFC;        /* page background, derived light */
-  --color-surface: #FFFFFF;   /* card surfaces */
-  --color-text: var(--color-ink);
-  --color-text-muted: #5A6B73;
-  --color-border: #E1ECF4;
+  /* Palette - Premium Dark Mode */
+  --color-bg: #050810;        /* Deep space black */
+  --color-surface: rgba(15, 23, 42, 0.5);   /* Glassmorphic card surface */
+  --color-surface-hover: rgba(30, 41, 59, 0.7);
+  --color-text: #E2E8F0;      /* Light gray text */
+  --color-text-muted: #94A3B8;
+  --color-border: rgba(255, 255, 255, 0.08);
+  
+  --color-ink: #FFFFFF;       /* Headers */
+  --color-navy: #38BDF8;      /* Primary accent / Links */
+  --color-blue: #0EA5E9;      /* Secondary accent */
+  --color-sky: rgba(56, 189, 248, 0.15); /* Soft highlight backgrounds */
 
   /* Type */
   --font-display: "Space Grotesk", "Segoe UI", sans-serif;

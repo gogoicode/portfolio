@@ -1,6 +1,7 @@
 .certs__list {
   display: flex;
   flex-direction: column;
+  gap: var(--space-2);
 }
 
 .certs__item {
@@ -9,12 +10,7 @@
   align-items: baseline;
   gap: var(--space-2);
   flex-wrap: wrap;
-  padding: var(--space-2) 0;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.certs__item:first-child {
-  border-top: 1px solid var(--color-border);
+  padding: var(--space-2) var(--space-3);
 }
 
 .certs__title {

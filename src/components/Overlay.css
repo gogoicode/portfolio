@@ -1,0 +1,73 @@
+.overlay__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(5, 8, 16, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 200; /* Above navbar and canvas */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-3);
+}
+
+.overlay__modal {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: var(--radius);
+  /* Use glass-panel class for the background, but add local padding */
+}
+
+/* Hide scrollbar for a cleaner look */
+.overlay__modal::-webkit-scrollbar {
+  width: 6px;
+}
+.overlay__modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+.overlay__modal::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+}
+
+.overlay__close {
+  position: sticky;
+  top: var(--space-3);
+  right: var(--space-3);
+  float: right; /* Quick hack since it's sticky but we want it on the right */
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-surface-hover);
+  border: 1px solid var(--color-border);
+  color: var(--color-ink);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: var(--transition);
+}
+
+.overlay__close:hover {
+  background: var(--color-navy);
+  color: #fff;
+}
+
+.overlay__content {
+  /* Sections already have padding, so we just remove their max-width or let them be */
+}
+
+/* Override section padding when inside overlay to prevent double padding */
+.overlay__content section {
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}

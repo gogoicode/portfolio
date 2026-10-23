@@ -1,3 +1,8 @@
+.contact__panel {
+  padding: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
 .contact__text {
   max-width: 560px;
   color: var(--color-text-muted);

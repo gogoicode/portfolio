@@ -4,6 +4,10 @@
   gap: var(--space-3);
 }
 
+.skills__group {
+  padding: var(--space-3);
+}
+
 .skills__category {
   font-size: var(--fs-small);
   text-transform: uppercase;

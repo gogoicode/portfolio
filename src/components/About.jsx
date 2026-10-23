@@ -1,23 +1,36 @@
+import { motion } from "framer-motion";
 import { education } from "../data/profile";
 import "./About.css";
 
 export default function About() {
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+  };
+
   return (
-    <section id="about" className="about">
-      <p className="section-eyebrow">About</p>
-      <h2 className="section-title">Education</h2>
+    <motion.section 
+      id="about" 
+      className="about"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ staggerChildren: 0.15 }}
+    >
+      <motion.p variants={itemVariants} className="section-eyebrow">About</motion.p>
+      <motion.h2 variants={itemVariants} className="section-title">Education</motion.h2>
 
       <ul className="about__list">
         {education.map((item) => (
-          <li className="about__item" key={item.degree}>
+          <motion.li variants={itemVariants} className="about__item glass-panel" key={item.degree}>
             <div className="about__item-head">
               <h3>{item.degree}</h3>
               <span className="about__period">{item.period}</span>
             </div>
             <p className="about__place">{item.place}</p>
-          </li>
+          </motion.li>
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 }

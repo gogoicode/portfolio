@@ -19,10 +19,15 @@
   margin-bottom: var(--space-3);
 }
 
-.hero__summary {
+.hero__summary-panel {
   max-width: 640px;
-  color: var(--color-text-muted);
+  padding: var(--space-2);
   margin-bottom: var(--space-4);
+  border-left: 4px solid var(--color-navy);
+}
+
+.hero__summary {
+  color: var(--color-text-muted);
 }
 
 .hero__actions {
